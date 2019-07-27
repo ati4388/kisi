@@ -1,0 +1,45 @@
+<div class="row mt-2">
+    <div class="col" style="text-align: center;">
+        <img src="/public/img/bakanlikLogo.png" alt="Tarım Bakanlığı logosu">
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-sm-6 mr-auto ml-auto">
+        <form action="/login" method="post">
+            <div class="card cardim">
+                <div class="card-header text-center bg-info" style="color: white;">
+                    Giriş Paneli
+                </div>
+                <div class="card-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">
+                                <i class="fa fa-user"></i>
+                            </span>
+                        </div>
+                        <input type="text" name='kullaniciadi' class="form-control" placeholder="kullanıcı adı" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-lock"></i></span>
+                        </div>
+                        <input type="password" name="txtPassword" class="form-control" placeholder="şifre" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="card-footer clearfix">
+                    <div class="float-right">
+                        <button type="submit" class="btn btn-success"><i class="fas fa-sign-in-alt" style="font-size: 18px"></i> Giriş</button>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div>
+                        {{#if pageMessage}}
+                        <div class="alert alert-danger mt-1" role="alert" style="text-align: center;">
+                            {{pageMessage}}
+                        </div>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
